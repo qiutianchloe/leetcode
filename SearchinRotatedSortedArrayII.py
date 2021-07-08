@@ -13,12 +13,10 @@ class Solution(object):
             if nums[mid] == target:
                 return True
             
-            #make sure that when nums[left]==nums[mid] or nums[right]==nums[mid]
-            #the left or right part are sorted 
+            #make sure that when nums[left]==nums[mid]
+            #the left are sorted 
             while left<mid and nums[left]==nums[mid]:
                 left += 1
-            while right>mid and nums[right]==nums[mid]:
-                right -=1
             
             #left part of nums are sorted
             if(nums[left]<=nums[mid]):
